@@ -1,0 +1,94 @@
+.table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: #25282a;
+  font-size: 14px;
+  table-layout: fixed;
+  width: max-content;
+}
+
+.tableContainer {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  padding-bottom: 17px; /* Makes sure a potential scrollbar doesn't overlap the last row */
+}
+
+.verticalAlignTop td {
+  vertical-align: top;
+}
+
+.table thead {
+  border-bottom: 1px solid #25282a;
+  vertical-align: bottom;
+}
+
+.table thead tr {
+  background: #ffffff;
+}
+
+.table tr,
+.table th,
+.table td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.2em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+.table th {
+  font-weight: normal;
+}
+
+.table thead tr:first-child th {
+  font-weight: bold;
+}
+
+.table tbody tr:hover,
+.table tbody tr:hover td[data-sticky] {
+  background: rgb(209 243 249);
+}
+
+.table tbody.loading {
+  opacity: 0.4;
+}
+
+.table thead th[data-sticky] {
+  background: white;
+}
+
+.table tr:not(:hover) td[data-sticky] {
+  background: white;
+}
+
+.table tbody tr:nth-child(odd):not(:hover),
+.table tbody tr:nth-child(odd):not(:hover) td[data-sticky] {
+  background: #f5f5f5;
+}
+
+.table tbody tr.selected,
+.table tbody tr.selected:hover,
+.table tbody tr.selected:nth-child(odd) {
+  background-color: rgba(187, 22, 163, 0.8);
+  color: white;
+
+  select {
+    color: initial;
+  }
+}
+
+.longTable td:last-child,
+.longTable td:nth-last-child(2) {
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+/* This tricky selector selects the last sticky column's cells */
+.tableContainer[data-scrolled] [data-sticky]:not(:has(~ [data-sticky])) {
+  /* This `box-shadow` applies a right border (`border-right` doesn't work properly since we also have `border-collapse: collapse`) */
+  box-shadow: inset -1px 0 0 0px #b2b2b2;
+}

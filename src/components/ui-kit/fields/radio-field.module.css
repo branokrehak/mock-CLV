@@ -1,0 +1,33 @@
+.radio {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 14px;
+  height: 14px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio:checked {
+  border-color: #0074ff;
+}
+
+.radio:checked::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 2px;
+  background-color: #0074ff;
+  border-radius: 50%;
+}
+
+.radio.showErrors:invalid {
+  border-color: red;
+  box-shadow: 0 0 2px red;
+}

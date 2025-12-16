@@ -1,0 +1,51 @@
+.toggle {
+  padding: 2px 4px;
+  background-color: #898d8d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  min-width: 50px;
+}
+
+/* Style the dropdown menu */
+.menu {
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  font-size: 14px;
+  z-index: 10000;
+}
+
+/* Style the checkbox label in the dropdown */
+.menu label {
+  /* display: block; */
+  padding: 2px 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Style the checkbox input */
+.menu input {
+  margin-right: 8px;
+}
+
+/* Style the checkbox when checked */
+.menu input:checked + span {
+  font-weight: bold;
+}
+
+/* Style the span next to the checkbox label */
+.menu span {
+  vertical-align: middle;
+}
+
+/* Style the checkbox label hover effect */
+.menu label:hover {
+  background-color: #f5f5f5;
+}
+
+.active {
+  background-color: rgb(187 22 163);
+}

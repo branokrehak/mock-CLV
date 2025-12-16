@@ -1,0 +1,49 @@
+.root {
+  border-bottom: 0.5px solid #9ea2a2;
+  min-height: 70px;
+  box-sizing: border-box;
+}
+
+.logo {
+  text-align: initial;
+}
+
+.logo:hover {
+  font-style: normal;
+}
+
+.logo img {
+  width: 130px;
+  padding-top: 9px;
+}
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navWide {
+  margin-left: 87px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+}
+
+.nav a:hover {
+  background-color: #e8e8e8;
+}
+
+.nav i {
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.1em;
+}

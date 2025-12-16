@@ -1,0 +1,34 @@
+.table {
+  border-collapse: collapse;
+  table-layout: auto;
+  line-height: normal;
+  white-space: normal;
+}
+
+.big {
+  font-size: 1.05em;
+}
+
+.table tr td {
+  border: none;
+  vertical-align: top;
+}
+
+.dataAdd tr td {
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.table tbody tr:nth-child(odd) {
+  background: unset;
+}
+
+.table tbody tr:hover {
+  background: unset;
+}
+
+.table td > textarea:not(.autosize) {
+  width: 375px;
+  height: 200px;
+  overflow-y: auto;
+}

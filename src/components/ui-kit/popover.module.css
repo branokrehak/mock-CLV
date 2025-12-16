@@ -1,0 +1,53 @@
+.trigger {
+  appearance: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: auto;
+  outline: none;
+  border-radius: 6px;
+  padding: 0 16px;
+  background-color: hsl(200 98% 39%);
+  color: white;
+  font-size: 16px;
+  line-height: 0;
+  transition: 250ms background-color;
+}
+
+.trigger:hover {
+  background-color: hsl(201 96% 32%);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid hsl(200 98% 39%);
+  outline-offset: 2px;
+}
+
+.trigger:active {
+  background-color: hsl(201 90% 27%);
+}
+
+.content {
+  border: 1px solid hsl(240 5% 84%);
+  border-radius: 6px;
+  padding: 12px;
+  background-color: white;
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform-origin: var(--kb-popover-content-transform-origin);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.closeButton {
+  height: 16px;
+  width: 16px;
+  color: hsl(240 5% 34%);
+}

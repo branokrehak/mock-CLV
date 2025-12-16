@@ -1,0 +1,7 @@
+.plot {
+  max-width: 70%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 20px auto;
+  display: block;
+}

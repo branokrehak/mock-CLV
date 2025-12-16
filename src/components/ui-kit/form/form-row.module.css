@@ -1,0 +1,33 @@
+.leftColumn {
+  font-weight: bold;
+  padding-right: 0.4em;
+}
+
+.rightColumn {
+  text-align: left;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+
+.editColumn {
+  text-align: left;
+  font-size: 0.9em;
+  margin-left: 0.3em;
+}
+
+.columnMaxWidth {
+  max-width: 400px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.table td > div.maxHeight {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.table td > textarea:not(.autosize) {
+  width: 375px;
+  height: 200px;
+  overflow-y: auto;
+}

@@ -1,0 +1,19 @@
+.datetimeSetter {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.datetimeSetter p {
+  margin: 2px;
+}
+
+.datetimeSetter p .title {
+  font-size: 0.95em;
+}
+
+.datetimeSetter p button {
+  background: transparent;
+  padding: 3px;
+  border: 0.2px solid #54585a;
+  margin-left: 20px;
+}

@@ -1,0 +1,9 @@
+.root {
+  border: 1px solid grey;
+  padding: 2px;
+}
+
+.root.showErrors:invalid {
+  border-color: red;
+  box-shadow: 0 0 2px red;
+}

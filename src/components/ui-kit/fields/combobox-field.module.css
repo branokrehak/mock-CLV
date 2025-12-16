@@ -1,0 +1,103 @@
+.control {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 160px;
+  outline: none;
+  background-color: white;
+  border: 1px solid grey;
+  color: hsl(240 4% 16%);
+  transition:
+    border-color 250ms,
+    color 250ms;
+}
+
+.controlMulti {
+  width: 200px;
+}
+
+.input {
+  flex: 1 1 50px;
+  min-width: 50px;
+  outline: none;
+  border: none;
+}
+
+.input::placeholder {
+  color: hsl(240 4% 46%);
+}
+
+.reset {
+  appearance: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  outline: none;
+  padding: 0 4px;
+  border: none;
+  background: none;
+}
+
+.trigger {
+  appearance: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  outline: none;
+  padding: 0 4px;
+  border: none;
+  background: none;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.content {
+  background-color: white;
+  border: 1px solid lightgrey;
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  z-index: 10000;
+}
+
+.listbox {
+  overflow-y: auto;
+  max-height: 360px;
+  padding: 0;
+  margin: 0;
+}
+
+.listbox:focus {
+  outline: none;
+}
+
+.item {
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+  padding: 0 12px;
+  position: relative;
+  user-select: none;
+  outline: none;
+}
+
+.item[data-disabled] {
+  color: hsl(240 5% 65%);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.item[data-highlighted] {
+  outline: none;
+  background-color: grey;
+  color: white;
+}

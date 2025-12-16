@@ -1,0 +1,102 @@
+/* Style of PPG quality flags table */
+.info-table {
+  font-size: 0.8em;
+  border-collapse: collapse;
+  table-layout: auto;
+  padding: 0em;
+  line-height: normal;
+  white-space: normal;
+}
+
+.info-table th,
+.info-table td {
+  text-align: left;
+  word-wrap: break-word;
+  vertical-align: top;
+}
+
+.info-table td:last-child {
+  max-width: 500px;
+}
+
+.info-table td:first-child {
+  max-width: 100px;
+  padding-right: 10px;
+}
+
+/* Hide borders and colors */
+.info-table th,
+.info-table td {
+  border: none;
+  background-color: transparent;
+}
+
+#user-class td:first-child {
+  text-align: left;
+  max-width: 100px;
+}
+
+#user-class td:nth-child(2) {
+  text-align: center;
+  max-width: 100px;
+}
+
+.copied-notice {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(5, 195, 222, 0.95);
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.copied-notice.active {
+  display: block;
+}
+
+.long-link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 300px;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-red {
+  color: red;
+}
+
+a.patient-link {
+  color: #bb16a3;
+}
+
+a.disabled-link {
+  pointer-events: none;
+  color: gray;
+}
+
+[data-tooltip] {
+  position: relative;
+  display: inline-block;
+}
+
+[data-tooltip]:hover::after {
+  display: block;
+  position: absolute;
+  content: attr(data-tooltip);
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  bottom: 120%;
+  right: 0;
+  padding: 5px 8px;
+  white-space: nowrap;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}

@@ -1,0 +1,26 @@
+.add {
+  background-color: #0092cb;
+  cursor: pointer;
+}
+
+.editable {
+  background-color: #9ea2a2;
+  cursor: pointer;
+}
+
+.editable::after {
+  content: "✕";
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  font-size: 10px;
+  color: #ffffff;
+  background-color: #dd7fd3;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.multiline {
+  text-align: left;
+  max-width: 150px;
+}
+
+.collapsed {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button {
+  border: none;
+  margin-left: 4px;
+}

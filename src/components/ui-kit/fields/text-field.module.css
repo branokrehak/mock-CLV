@@ -1,0 +1,15 @@
+.root {
+  border: 1px solid grey;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.root.showErrors:invalid {
+  border-color: red;
+  box-shadow: 0 0 2px red;
+}
+
+.textarea {
+  width: 135px;
+  max-height: 200px;
+}

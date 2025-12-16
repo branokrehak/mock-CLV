@@ -1,0 +1,9 @@
+.content {
+  z-index: 10050;
+  max-width: min(calc(100vw - 16px), 380px);
+  border-radius: 4px;
+  padding: 8px;
+  background-color: hsl(240 4% 16%);
+  color: white;
+  font-size: 14px;
+}
