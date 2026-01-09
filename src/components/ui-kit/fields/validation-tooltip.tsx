@@ -20,14 +20,14 @@ export function ValidationTooltip({
   }, [model.message, model.forceOpen, hover]);
 
   return (
-    <div
+    <span
       className={className ?? "inline-block relative"}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
       {children}
       {show && (
-        <div
+        <span
           className={styles.content}
           style={{
             position: "absolute",
@@ -39,8 +39,8 @@ export function ValidationTooltip({
           }}
         >
           {model.message}
-        </div>
+        </span>
       )}
-    </div>
+    </span>
   );
 }

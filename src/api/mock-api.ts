@@ -15,6 +15,7 @@ import type {
   SeerlinqComputedWithPPGResponse,
   SupportedDiagnosis,
   SupportedMedicalData,
+  SupportedMedicationData,
   SupportedSymptom,
   UserResponseManaging,
 } from "./mock-types";
@@ -1085,6 +1086,24 @@ export async function apiGetMedicaldataList(options?: any): Promise<{
         data_category: "labs",
         primary_unit: "mmol/L",
         all_units: ["mmol/L", "mEq/L"],
+        data_value: { value_type: "float" as const },
+      },
+    ],
+  });
+}
+
+// Medication data endpoints
+export async function apiGetMedicationdataList(options?: any): Promise<{
+  data: { medication_data: SupportedMedicationData[] };
+}> {
+  console.log("[MOCK] apiGetMedicationdataList");
+  return mockResponse({
+    medication_data: [
+      {
+        data_name: "Diuretic",
+        data_category: "medications",  
+        primary_unit: "mg",
+        all_units: ["mg"],
         data_value: { value_type: "float" as const },
       },
     ],

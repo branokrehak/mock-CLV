@@ -11,6 +11,8 @@ import { ForgotPasswordRoute } from "./forgot-password-route";
 import { MainLayout } from "./layout/main-layout";
 import { LoginRoute } from "./login-route";
 import { RouterRoot } from "./router-root";
+import { MedicationsTable } from "../features/patient/medications/medications-table";
+import { AddMedicationsTable } from "../features/patient/medications/add-medications-table";
 
 export function createRouter(app: AppModel) {
   const routes: RouteObject[] = [
@@ -58,6 +60,21 @@ export function createRouter(app: AppModel) {
                     {
                       path: "add",
                       element: <AddMedicalTable app={app} variant="labs" />,
+                      handle: { crumb: "Add", backButton: true },
+                    },
+                  ],
+                },
+                {
+                  path: "medications",
+                  handle: { crumb: "Medications" },
+                  children: [
+                    {
+                      index: true,
+                      element: <MedicationsTable app={app} />,
+                    },
+                    {
+                      path: "add",
+                      element: <AddMedicationsTable app={app} variant="medications" />,
                       handle: { crumb: "Add", backButton: true },
                     },
                   ],

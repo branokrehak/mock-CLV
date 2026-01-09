@@ -450,6 +450,17 @@ export type SupportedMedicalData = {
   [key: string]: any;
 };
 
+export type SupportedMedicationData = {
+  data_name: string;
+  primary_unit: string;
+  all_units: string[] | null;
+  data_value: {
+    value_type: "float";
+    [key: string]: any;
+  };
+  [key: string]: any;
+};
+
 export type SupportedSymptom = {
   data_name: string;
   data_value: {
@@ -660,6 +671,10 @@ export enum MedicalDataCategory {
   labs = "labs",
   vital = "vital",
   other = "other",
+}
+
+export enum MedicationDataCategory {
+  medications = "medications",
 }
 
 export enum ScheduleTypes {

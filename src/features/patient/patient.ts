@@ -5,6 +5,7 @@ import {
   apiGetHfVitalsPatientId,
   apiGetLabelstudioTaskProjectIdPpgUuid,
   apiGetMedicaldataList,
+  apiGetMedicationdataList,
   apiGetPatientsPatientId,
   apiGetPatientsPatientIdComputed,
   apiGetPatientsPatientIdDerived,
@@ -28,6 +29,7 @@ import {
   QuickLookTasks,
   SupportedDiagnosis,
   SupportedMedicalData,
+  SupportedMedicationData,
   SupportedSymptom,
 } from "../../api";
 import { ApiConnector } from "../../api/api-connector";
@@ -61,6 +63,7 @@ export class Patient {
 
   supportedDiags: SupportedDiagnosis[];
   supportedMedData: SupportedMedicalData[];
+  supportedMedicationData: SupportedMedicationData[];
   supportedSymptoms: SupportedSymptom[];
 
   isHealthProPatient: boolean;
@@ -117,6 +120,7 @@ export class Patient {
       this.isHealthProPatient = this.isHealthPro(this.data);
 
       await this.fetchSupportedMedicalData();
+      await this.fetchSupportedMedicationData();
 
       this.loaded = true;
     } catch (error) {
@@ -345,6 +349,13 @@ export class Patient {
       meta: { useSessionCache: true },
     });
     this.supportedMedData = response.data.medical_data;
+  }
+
+  async fetchSupportedMedicationData() {
+    const response = await apiGetMedicationdataList({
+      meta: { useSessionCache: true },
+    });
+    this.supportedMedicationData = response.data.medication_data;
   }
 
   async fetchSupportedSymptoms() {

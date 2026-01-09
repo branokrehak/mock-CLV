@@ -1,7 +1,7 @@
 import * as PopoverPrimitive from "@radix-ui/react-popover";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import logoPng from "../../../public/static/sq_logo.png";
+import logoPng from "/static/sq_logo.png";
 import { Button } from "../../components/ui-kit/button";
 import { PopoverContent } from "../../components/ui-kit/popover";
 import { reacter } from "../../utils/react";

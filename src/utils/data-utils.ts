@@ -5,6 +5,7 @@ import {
   SeerlinqStudy,
   SupportedDiagnosis,
   SupportedMedicalData,
+  SupportedMedicationData,
   SupportedSymptom,
 } from "../api";
 
@@ -81,7 +82,8 @@ export const dayNames: Record<Days, string> = {
 export type SupportedData =
   | SupportedMedicalData
   | SupportedSymptom
-  | SupportedDiagnosis;
+  | SupportedDiagnosis
+  | SupportedMedicationData;
 
 export function getNamesValues(variables: SupportedData[]) {
   return variables.map((data) => data.data_name);
@@ -95,7 +97,7 @@ export function getVariableByName<T extends SupportedData>(
 }
 
 export function getPrimaryUnitByName(
-  variables: SupportedMedicalData[],
+  variables: SupportedData[],
   dataName: string,
 ) {
   const variable = variables.find((data) => data.data_name === dataName);
@@ -106,10 +108,11 @@ export function getPrimaryUnitByName(
 }
 
 export function getUnitsValuesByName(
-  variables: SupportedMedicalData[],
+  variables: SupportedData[],
   dataName: string,
 ) {
   const variable = variables.find((data) => data.data_name === dataName);
+  
   if (variable === undefined || variable === null) {
     return [];
   }

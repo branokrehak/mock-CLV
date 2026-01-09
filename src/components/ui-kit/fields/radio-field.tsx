@@ -42,7 +42,7 @@ export const RadioField = reacter(function RadioField<
 
   return (
     <ValidationTooltip model={tooltip}>
-      <div className="flex gap-2">
+      <span className="flex gap-2">
         {[...valuesMap.entries()].map(([value, displayValue], index) => (
           <label key={value} className="flex items-center gap-1">
             {!reverse && <span>{displayValue}: </span>}
@@ -70,7 +70,7 @@ export const RadioField = reacter(function RadioField<
             {reverse && <span> {displayValue}</span>}
           </label>
         ))}
-      </div>
+      </span>
     </ValidationTooltip>
   );
 });
