@@ -79,7 +79,6 @@ export const MedicationsTable = reacter(function LabsTable(props: { app: AppMode
             header1: "Name",
             attr: "medication_name",
             type: "string",
-            editable: true,
           },
           {
             header1: "Dose",
@@ -91,6 +90,7 @@ export const MedicationsTable = reacter(function LabsTable(props: { app: AppMode
             header1: "Unit",
             attr: "medication_unit",
             type: "string",
+            editable: true,
           },
           {
             header1: "Comment",
