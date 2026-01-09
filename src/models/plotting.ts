@@ -49,7 +49,7 @@ export class SimplePlotModel<T extends object = any> {
       new EnumFilter(this.filterKey, [filterOption]),
       ...this.extraFilters,
     ];
-
+    
     return applySort(applyFilters(this.data.data, filters), sort);
   }
 
@@ -274,6 +274,15 @@ export class MedicalPlotModel extends SimplePlotModel {
     this.valueKey = "measurement_value";
     this.filterKey = "measurement_type";
     this.dateTimeKey = "measurement_datetime";
+  }
+}
+
+export class MedicationPlotModel extends SimplePlotModel {
+  constructor(dataModel: any, plotTypeOptions: string[], chartId: string) {
+    super(dataModel, plotTypeOptions, chartId);
+    this.valueKey = "medication_dose";
+    this.filterKey = "medication_group";
+    this.dateTimeKey = "medication_started";
   }
 }
 

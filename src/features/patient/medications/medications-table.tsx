@@ -7,9 +7,9 @@ import { DataTable } from "../../../components/ui-kit/tables/data-table";
 import { reacter } from "../../../utils/react";
 import { useFetch } from "../../../utils/use-fetch";
 import { MedData } from "../common/med-data";
-import { MedicalPlot } from "../common/medical-plot";
 import { PatientSubpage } from "../common/patient-subpage";
 import { CellLastEdit } from "../../../components/ui-kit/tables/cells/cell-last-edit";
+import { MedicationPlot } from "./medication-plot";
 
 export const MedicationsTable = reacter(function LabsTable(props: { app: AppModel }) {
   const patient = props.app.patient;
@@ -36,15 +36,12 @@ export const MedicationsTable = reacter(function LabsTable(props: { app: AppMode
     <PatientSubpage title="Medications" loading={loading}>
       <AButton href="add">Add medications</AButton>
 
-      <MedicalPlot
+      <MedicationPlot
         dataModel={model}
         plotTypeOptions={[
-          "Metoprolol",
-          "Lisinopril",
-          "Furosemide",
-          "creatinine",
-          "hemoglobin",
-          "hematocrit",
+          "Beta-blocker",
+          "ACE inhibitor",
+          "Diuretic",
         ]}
       />
 
