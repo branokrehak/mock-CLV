@@ -83,7 +83,7 @@ export const MedicationsTable = reacter(function MedicationsTable(props: { app: 
           },
           {
             header1: "Unit",
-            attr: "measurement_unit",
+            attr: "medication_unit",
             type: "string",
             editable: true,
           },
