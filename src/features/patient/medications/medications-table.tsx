@@ -33,7 +33,7 @@ export const MedicationsTable = reacter(function MedicationsTable(props: { app: 
 
   return (
     <PatientSubpage title="Medications" loading={loading}>
-      <AButton href="add">Add medications</AButton>
+      <AButton to="add">Add medications</AButton>
 
       <br />
       <br />

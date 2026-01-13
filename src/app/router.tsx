@@ -2,7 +2,7 @@ import { createBrowserRouter, Navigate, RouteObject } from "react-router-dom";
 import { AccountRoute } from "../features/account/account-route";
 import { AddPatientRoute } from "../features/add-patient/add-patient-route";
 import { LabsTable } from "../features/patient/labs/labs-table";
-import { MedicationsTable } from "../features/patient/medications/medicatons-table";
+import { MedicationsTable } from "../features/patient/medications/medications-table";
 import { AddMedicalTable } from "../features/patient/medical/add-medical-table";
 import { PatientRoute } from "../features/patient/patient-route";
 import { SymptomsRoute } from "../features/patient/symptoms/symptoms-route";

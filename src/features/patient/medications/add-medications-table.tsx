@@ -3,15 +3,9 @@ import { useMemo } from "react";
 import { AppModel } from "../../../app/app-model";
 import { AddTable } from "../../../components/ui-kit/tables/add-table";
 import { CellDateField } from "../../../components/ui-kit/tables/cell-fields/cell-date-field";
-import { CellSelectField } from "../../../components/ui-kit/tables/cell-fields/cell-select-field";
 import { CellTextField } from "../../../components/ui-kit/tables/cell-fields/cell-text-field";
 import { CellRemoveButton } from "../../../components/ui-kit/tables/cells/cell-remove-button";
-import {
-  getNamesValues,
-  getPrimaryUnitByName,
-  getUnitsValuesByName,
-  getVariableByName,
-} from "../../../utils/data-utils";
+
 import { reacter } from "../../../utils/react";
 import { AddMedications } from "./add-medications";
 
@@ -21,10 +15,10 @@ export const AddMedicationsTable = reacter(function AddMedicationsTable(props: {
 }) {
     const patient = props.app.patient;
     const model = useMemo(() => {
-    const m = reactive(new AddMedications(patient.api, patient));
-    m.initEmpty();
-    return m;
-  }, [patient]);
+        const m = reactive(new AddMedications(patient.api, patient));
+        m.initEmpty();
+        return m;
+    }, [patient]);
 
   return (
     <AddTable

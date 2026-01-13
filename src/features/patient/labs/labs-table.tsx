@@ -34,7 +34,7 @@ export const LabsTable = reacter(function LabsTable(props: { app: AppModel }) {
 
   return (
     <PatientSubpage title="Labs" loading={loading}>
-      <AButton href="add">Add labs</AButton>
+      <AButton to="add">Add labs</AButton>
 
       <MedicalPlot
         dataModel={model}
