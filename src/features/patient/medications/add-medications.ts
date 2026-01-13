@@ -9,6 +9,8 @@ export class AddMedications extends DataAdd {
       this.desc = "Patient medications data";
       this.bodyField = "medications";
       this.endpoint = "api/v1/medications/bulk";
+      this.defaultDateTimeName = "Now";
+      this.defaultDateTimeFields = ["medication_started"];
       this.reloadToTab = "medications";
       this.requiredFields = [
         "medication_started",
